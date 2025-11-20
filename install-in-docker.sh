@@ -60,6 +60,7 @@ check_os(){
         exit 1
     fi
 }
+
 # ================================
 # Docker 检查与安装
 # ================================
@@ -126,6 +127,7 @@ check_docker() {
         docker info || true
         exit 1
     fi
+
     log_info "Docker 环境检查完成 ✓"
 }
 # ============================================================
@@ -258,7 +260,7 @@ deploy_sniper(){
     ADMIN_PASSWORD=$ADMIN_PASSWORD
     JWT_SECRET=$JWT_SECRET
     TWO_FA_SECRET=$TWO_FA_SECRET
-    EOF
+EOF
 
     log_info ".env 配置文件已生成：sniper-server/.env"
     log_info "拉取最新 Sniper 镜像..."
@@ -274,8 +276,8 @@ deploy_sniper(){
         --restart always \
         -p 8870:8870 \
         -v $CONFIG_DIR/.env:/app/server/src/.env \
-        -v $DB_DIR:/app/db \
         -v /var/run/docker.sock:/var/run/docker.sock \
+        -v $DB_DIR:/app/db \
         $IMAGE
 	# 启动后等待 5 秒
 	sleep 5
@@ -338,7 +340,7 @@ main(){
     echo "  ███████║██║ ╚████║██║ ██║     ███████╗██║  ██║"
     echo "  ╚══════╝╚═╝  ╚═══╝╚═╝ ╚═╝     ╚══════╝╚═╝  ╚═╝ "
     echo
-    echo "              🚀 SNIPER INSTALLER"
+    echo "               🚀 SNIPER INSTALLER"
     echo -e "${NC}"
     check_root
     check_architecture
