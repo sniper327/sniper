@@ -60,7 +60,6 @@ check_os(){
         exit 1
     fi
 }
-
 # ================================
 # Docker 检查与安装
 # ================================
@@ -120,7 +119,6 @@ check_docker() {
     # 4. 检查 Docker 权限是否正常
     # ============================================
     log_info "检查 Docker 权限..."
-
     if docker info >/dev/null 2>&1; then
         log_info "Docker 权限正常 ✓"
     else
@@ -128,7 +126,6 @@ check_docker() {
         docker info || true
         exit 1
     fi
-
     log_info "Docker 环境检查完成 ✓"
 }
 # ============================================================
@@ -175,9 +172,7 @@ install_docker() {
     systemctl enable docker
     systemctl daemon-reload
     systemctl start docker
-
-    sleep 1
-
+    sleep 2
     if systemctl is-active --quiet docker; then
         log_info "Docker 安装并启动成功 ✓"
     else
@@ -258,12 +253,12 @@ deploy_sniper(){
 
     # 创建 .env
     cat > $CONFIG_DIR/.env <<EOF
-PORT=8870
-SERVER_IP=$SERVER_IP
-ADMIN_PASSWORD=$ADMIN_PASSWORD
-JWT_SECRET=$JWT_SECRET
-TWO_FA_SECRET=$TWO_FA_SECRET
-EOF
+    PORT=8870
+    SERVER_IP=$SERVER_IP
+    ADMIN_PASSWORD=$ADMIN_PASSWORD
+    JWT_SECRET=$JWT_SECRET
+    TWO_FA_SECRET=$TWO_FA_SECRET
+    EOF
 
     log_info ".env 配置文件已生成：sniper-server/.env"
     log_info "拉取最新 Sniper 镜像..."
@@ -280,6 +275,7 @@ EOF
         -p 8870:8870 \
         -v $CONFIG_DIR/.env:/app/server/src/.env \
         -v $DB_DIR:/app/db \
+        -v /var/run/docker.sock:/var/run/docker.sock \
         $IMAGE
 	# 启动后等待 5 秒
 	sleep 5
@@ -342,9 +338,8 @@ main(){
     echo "  ███████║██║ ╚████║██║ ██║     ███████╗██║  ██║"
     echo "  ╚══════╝╚═╝  ╚═══╝╚═╝ ╚═╝     ╚══════╝╚═╝  ╚═╝ "
     echo
-    echo "                   🚀 SNIPER INSTALLER"
+    echo "              🚀 SNIPER INSTALLER"
     echo -e "${NC}"
-
     check_root
     check_architecture
     check_os
@@ -352,7 +347,6 @@ main(){
 	install_qr
     get_public_ip
     deploy_sniper
-
     show_result
 }
 
