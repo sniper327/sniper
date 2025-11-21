@@ -274,23 +274,13 @@ EOF
     docker run -d \
         --name $CONTAINER \
         --restart always \
-        --add-host=host.docker.internal:host-gateway \
         -p 8870:8870 \
         -v $CONFIG_DIR/.env:/app/server/src/.env \
+        -v /var/run/docker.sock:/var/run/docker.sock \
         -v $DB_DIR:/app/db \
         $IMAGE
-    docker run -d \
-        --name watchtower \
-        --restart always \
-        -p 127.0.0.1:9090:8080 \
-        -v /var/run/docker.sock:/var/run/docker.sock \
-        containrrr/watchtower \
-        --http-api-update \
-        --cleanup \
-        --interval 0 \
-        sniper    
-	# 启动后等待 5 秒
-	sleep 5
+	# 启动后等待 3 秒
+	sleep 3
 	# 1) 检查容器是否存在
 	if ! docker ps -a --format '{{.Names}}' | grep -q "^$CONTAINER$"; then
 		log_error "容器未创建成功！"
