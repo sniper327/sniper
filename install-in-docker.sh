@@ -286,7 +286,8 @@ EOF
         containrrr/watchtower \
         --http-api-update \
         --cleanup \
-        --interval 0    
+        --interval 0 \
+        sniper    
 	# 启动后等待 5 秒
 	sleep 5
 	# 1) 检查容器是否存在
