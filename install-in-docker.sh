@@ -276,7 +276,6 @@ EOF
         --restart always \
         -p 8870:8870 \
         -v $CONFIG_DIR/.env:/app/server/src/.env \
-        -v /var/run/docker.sock:/var/run/docker.sock \
         -v $DB_DIR:/app/db \
         $IMAGE
 	# 启动后等待 3 秒
