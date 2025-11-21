@@ -274,6 +274,7 @@ EOF
     docker run -d \
         --name $CONTAINER \
         --restart always \
+        --add-host=host.docker.internal:host-gateway \
         -p 8870:8870 \
         -v $CONFIG_DIR/.env:/app/server/src/.env \
         -v $DB_DIR:/app/db \
