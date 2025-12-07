@@ -36,7 +36,7 @@ Sniper 是一款面向交易用户的 **跨交易所套利 & 多平台资金监�
 
 ---
 
-### 📌 开始部署
+📌 一键部署（推荐使用最新版 Chrome 浏览器访问）
 
 ```bash
 curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/install-in-docker.sh | sudo bash -
