@@ -51,9 +51,9 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 |---|---|---|
 | PORT | Web 运行端口 | 8870 |
 | SERVER_IP | 服务器公网IP（用于外部访问） | 43.153.xxx.xxx ｜
-| ADMIN_PASSWORD | 登录面板密码（务必修改强密码） | 12345678 |
+| ADMIN_PASSWORD | 登录面板密码（建议登录后修改密码）| 12345678 |
 | JWT_SECRET | 登录 Token 加密秘钥 | 随机字符如 Axd9... |
-| TWO_FA_SECRET | Google 2FA 密钥 | 随机生成 |
+| TWO_FA_SECRET | Google 2FA 密钥 | 随机生成 | |
 ---
 
 ## 🔐 如何配置交易所 API？
