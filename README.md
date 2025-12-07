@@ -42,7 +42,19 @@ Sniper 是一款面向交易用户的 **跨交易所套利 & 多平台资金监�
 curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/install-in-docker.sh | sudo bash -
 ```
 🔥 安装完成后务必开放服务器端口 8870
-⚠ 若未放行该端口，将无法访问 Web 面板！
+**‼️ 若未放行该端口，将无法访问 Web 面板！
+
+## ⚙ 配置文件 .env 说明
+安装后会生成：📁 /data/sniper/config/.env
+
+| 字段 | 作用说明 | 示例 |
+|---|---|---|
+| PORT | Web 运行端口 | 8870 |
+| SERVER_IP | 服务器公网IP（用于外部访问） | 43.153.xxx.xxx ｜
+| ADMIN_PASSWORD | 登录面板密码（务必修改强密码） | 12345678 |
+| JWT_SECRET | 登录 Token 加密秘钥 | 随机字符如 Axd9... |
+| TWO_FA_SECRET | Google 2FA 密钥 | 随机生成 |
+---
 
 ## 🔐 如何配置交易所 API？
 

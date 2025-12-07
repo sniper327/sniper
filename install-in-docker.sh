@@ -251,7 +251,7 @@ deploy_sniper(){
     log_info "生成配置：JWT + 2FA"
     JWT_SECRET=$(generate_random 32)
     TWO_FA_SECRET=$(generate_2fa_secret)
-    ADMIN_PASSWORD="admin"
+    ADMIN_PASSWORD="12345678"
 
     # 创建 .env
     cat > $CONFIG_DIR/.env <<EOF
