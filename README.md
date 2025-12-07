@@ -41,6 +41,8 @@ Sniper 是一款面向交易用户的 **跨交易所套利 & 多平台资金监�
 ```bash
 curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/install-in-docker.sh | sudo bash -
 ```
+🔥 安装完成后务必开放服务器端口 8870
+⚠ 若未放行该端口，将无法访问 Web 面板！
 
 ## 🔐 如何配置交易所 API？
 
