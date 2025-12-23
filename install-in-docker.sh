@@ -335,7 +335,7 @@ show_qrcode(){
 # ================================
 show_result(){
     echo -e "\n${GREEN}🎉 Sniper 安装完成！${NC}"
-    echo -e "🌐 访问地址： ${GREEN}http://$SERVER_IP:$PORT/$PREFIX${NC}"
+    echo -e "🌐 访问地址： ${GREEN}http://$SERVER_IP:8870/$PREFIX${NC}"
     echo -e "🔑 管理密码： ${YELLOW}$ADMIN_PASSWORD${NC}"
     echo -e "📱 2FA 密钥： ${YELLOW}$TWO_FA_SECRET${NC}"
     echo -e "📁 配置文件： ${GREEN}$CONFIG_DIR/.env${NC}"
