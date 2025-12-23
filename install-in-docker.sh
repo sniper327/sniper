@@ -220,6 +220,19 @@ generate_2fa_secret(){
 }
 
 # ================================
+# 生成 Prefix
+# ================================
+generate_prefix(){
+    local chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    local prefix=""
+    local len=${#chars}
+    for i in {1..6}; do
+        prefix+="${chars:RANDOM%len:1}"
+    done
+    echo "$prefix"
+}
+
+# ================================
 # 公网 IP 获取
 # ================================
 get_public_ip(){
@@ -252,6 +265,7 @@ deploy_sniper(){
     JWT_SECRET=$(generate_random 32)
     TWO_FA_SECRET=$(generate_2fa_secret)
     ADMIN_PASSWORD="12345678"
+    PREFIX=$(generate_prefix)
 
     # 创建 .env
     cat > $CONFIG_DIR/.env <<EOF
@@ -260,6 +274,7 @@ deploy_sniper(){
     ADMIN_PASSWORD=$ADMIN_PASSWORD
     JWT_SECRET=$JWT_SECRET
     TWO_FA_SECRET=$TWO_FA_SECRET
+    PREFIX=$PREFIX
 EOF
 
     log_info ".env 配置文件已生成：sniper-server/.env"
@@ -320,7 +335,7 @@ show_qrcode(){
 # ================================
 show_result(){
     echo -e "\n${GREEN}🎉 Sniper 安装完成！${NC}"
-    echo -e "🌐 访问地址： ${GREEN}http://$SERVER_IP:8870${NC}"
+    echo -e "🌐 访问地址： ${GREEN}http://$SERVER_IP:$PORT/$PREFIX${NC}"
     echo -e "🔑 管理密码： ${YELLOW}$ADMIN_PASSWORD${NC}"
     echo -e "📱 2FA 密钥： ${YELLOW}$TWO_FA_SECRET${NC}"
     echo -e "📁 配置文件： ${GREEN}$CONFIG_DIR/.env${NC}"

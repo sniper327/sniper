@@ -54,6 +54,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 | ADMIN_PASSWORD | 登录面板密码（建议登录后修改密码）| 12345678 |
 | JWT_SECRET | 登录 Token 加密秘钥 | 随机字符如 Axd9... |
 | TWO_FA_SECRET | Google 2FA 密钥 | 随机生成 | |
+| PREFIX | 网页访问URL前缀 | 随机生成 | |
 ---
 
 ## 🔐 如何配置交易所 API？
@@ -109,5 +110,31 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 3. 绑定服务器 IP，并妥善保存 Passphrase
 
 ![OKX API 配置示例](images/okx_key.png)
+
+---
+
+### d. GATE
+
+1. 进入 API 管理 → 创建 API Key  
+2. 权限启用方式与上方一致：
+   - ✔️ 读取权限
+   - ✔️ 交易权限（需要开启双向持仓）
+   - ❌ 禁止开启提现
+3. 绑定服务器 IP，并妥善保存 Passphrase
+
+![OKX API 配置示例](images/gate_key.jpg)
+
+---
+
+### E. BYBIT
+
+1. 进入 API 管理 → 创建 API Key  
+2. 权限启用方式与上方一致：
+   - ✔️ 读取权限
+   - ✔️ 交易权限（需要开启双向持仓）
+   - ❌ 禁止开启提现
+3. 绑定服务器 IP，并妥善保存 Passphrase
+
+![OKX API 配置示例](images/bybit_key.jpg)
 
 ---
