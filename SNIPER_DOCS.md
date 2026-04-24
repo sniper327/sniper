@@ -156,7 +156,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `/images/standx_key.png`
+- `images/standx_key.png`
 
 ### Binance 交易所
 
@@ -171,7 +171,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `/images/binance_key.png`
+- `images/binance_key.png`
 
 补充说明：
 
@@ -188,7 +188,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `/images/bitget_key.png`
-- `/images/okx_key.png`
-- `/images/gate_key.png`
-- `/images/bybit_key.png`
+- `images/bitget_key.png`
+- `images/okx_key.png`
+- `images/gate_key.png`
+- `images/bybit_key.png`
