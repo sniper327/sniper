@@ -178,6 +178,26 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 - 未绑定会导致交易失败或被风控限制
 
+### Hyper 交易所
+
+1. 登录 Hyper 后台，进入相关配置页面
+2. 准备以下信息：
+
+- 主钱包密钥
+- 代理钱包
+
+3. 将主钱包密钥和代理钱包填写到 Sniper 的交易所配置中
+4. 保存后执行测试连接，确认配置可用
+
+配图：
+
+![Hyper API 配置示意图](images/hyper_key.jpg)
+
+补充说明：
+
+- Hyper 不需要配置 IP 白名单
+- Hyper 这里不涉及常规交易权限勾选，按页面要求填写主钱包密钥和代理钱包即可
+
 ### Bitget / OKX / Gate / Bybit 交易所
 
 每个交易所都需要：
@@ -191,5 +211,5 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 ![Bitget API 配置示意图](images/bitget_key.png)
 ![OKX API 配置示意图](images/okx_key.png)
-![Gate API 配置示意图](images/gate_key.png)
-![Bybit API 配置示意图](images/bybit_key.png)
+![Gate API 配置示意图](images/gate_key.jpg)
+![Bybit API 配置示意图](images/bybit_key.jpg)
