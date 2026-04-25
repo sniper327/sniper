@@ -10,25 +10,25 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `images/guide/install.png`
+- (images/guide/install.png)
 
 检测到 IP 地址一般会自动获取，如果没有检测到，手动确定 IP 即可。
 
 配图：
 
-- `images/guide/install2.png`
+- (images/guide/install2.png)
 
 到这一步，Sniper 已成功安装并启动。
 
 配图：
 
-- `images/guide/warn.png`
+- (images/guide/warn.png)
 
 复制上面的访问地址到浏览器，就进入这个页面。首次访问可能会出现浏览器安全提示，这是由于使用自签名证书导致的。点击“高级”并选择“继续前往”即可正常进入系统，不影响使用。
 
 配图：
 
-- `images/guide/login.png`
+- (images/guide/login.png)
 
 输入初始管理密码，并填写 Google Authenticator 中的 6 位动态验证码，即可成功登录后台。
 
@@ -36,7 +36,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `images/guide/tool.png`
+- (images/guide/tool.png)
 
 ### 左侧操作
 
@@ -56,7 +56,7 @@ curl -L https://raw.githubusercontent.com/sniper327/sniper/refs/heads/main/insta
 
 配图：
 
-- `images/guide/setting.png`
+- (images/guide/setting.png)
 
 ### 4.1 程序更新
 
@@ -78,7 +78,7 @@ API 建议仅开启交易权限，不要开启提现。
 
 配图：
 
-- `images/guide/add.png`
+- (images/guide/add.png)
 
 点击首页“添加新策略”按钮，会出现策略配置弹窗。
 
@@ -120,7 +120,7 @@ API 建议仅开启交易权限，不要开启提现。
 
 配图：
 
-- `images/guide/pairs.png`
+- (images/guide/pairs.png)
 
 ## 7. 实战演示视频
 
