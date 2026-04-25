@@ -17,7 +17,6 @@
 - Bitget
 - OKX
 - Bybit
-- Hyper
 - StandX
 - hyperliquid
 
